@@ -56,7 +56,7 @@ export default {
   data: () => ({
     todos: [],
     input: {},
-    url: 'http://164.90.229.206'
+    url: 'http://164.90.229.206/api'
   }),
 
   methods: {
