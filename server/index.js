@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+//dotenv
+require('dotenv').config()
 //self
 const routes = require('./routes/routes');
 
@@ -17,7 +19,7 @@ app.use('/api', routes);
 
 
 //connect db
-mongoose.connect("mongodb+srv://user1234:1234@cluster0.efaff.mongodb.net/tododb?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser: true, useUnifiedTopology: true });
 
 //start Server
 const PORT = process.env.PORT || 3000;
